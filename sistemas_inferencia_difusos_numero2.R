@@ -10,7 +10,7 @@ H <- seq(0, 100,  by=0.1)
 T <- seq(40, 120, by=0.1)
 
 # Ahora que los tengo definidos, tengo que definir la variable temperatura.
-# Esta variable seguirá una estrctura similar al ejercicio anteriormente entregado.
+# Esta variable seguirÃ¡ una estrctura similar al ejercicio anteriormente entregado.
 # Lo que voy a hacer es definir las funciones y entonces sacarlas mediante plots y lines.
 
 # Por lo tanto, vamos a comenzar con la TEMPERATURA.
@@ -19,7 +19,7 @@ T <- seq(40, 120, by=0.1)
 
 mu_x <- seq(0, length(T))
 
-#Función TRIANGULAR
+#FunciÃ³n TRIANGULAR
 mu_x <- rep(0, length(T))
 
 mu_x[ T > 80] <- 1
@@ -34,7 +34,7 @@ mu_x[ T > 80 & T < 100 ] <- (100 - T[ T > 80 & T < 100 ]) / (100-80)
 T_Media <- mu_x
 lines(T, mu_x, type="l", col="red")
 
-# Ahora que tengo cada cosa sacada, debo de pasar a hacer la otra función, la TRAPEZIODAL
+# Ahora que tengo cada cosa sacada, debo de pasar a hacer la otra funciÃ³n, la TRAPEZIODAL
 
 mu_x <- rep(0, length(T))
 
@@ -94,7 +94,7 @@ v_angular <- mu_x
 
 mu_x <- seq(0, length(H))
 
-#Tal y como hemos hecho antes, empezamos por la función TRIANGULAR
+#Tal y como hemos hecho antes, empezamos por la funciÃ³n TRIANGULAR
 
 mu_x <- rep(0, length(H))
 
@@ -110,7 +110,7 @@ mu_x[ H >= 50 & H < 75 ] <- (75 - H[ H >= 50 & H < 75 ]) / (75-50)
 Hum_Media <- mu_x
 lines(H, Hum_Media, type="l", col="black")
 
-# Ahora vamos con la función TRAPEZIODAL
+# Ahora vamos con la funciÃ³n TRAPEZIODAL
 
 mu_x <- rep(0, length(H))
 
@@ -171,18 +171,11 @@ regla8 <-- c(T_Media, Hum_Media, Vel_Media)
 regla9 <-- c(T_Alta, Hum_Alta, Vel_Alta)
 
 
-# Pues ya tenemos definidas las 9 reglas (El cuadrito está implementado en R)
+# Pues ya tenemos definidas las 9 reglas (El cuadrito estÃ¡ implementado en R)
 
 H <- rbind(regla1, regla2, regla3, regla4, regla5, regla6, regla7, regla8, regla9)
 
-
-
-
-################# HASTA AQU� EST� COPIADO DE MI PR�CTICA ANTERIOR, YA QUE TENGO QUE HACER EXACTAMENTE LO MISMO, PERO CON EL CAMBIO EN LA L�NEA 89 PARA GUARDAR LA VARIABLE
-
-
-
-### EJERCICIO OBLIGATORIO DE LA PRACTICA
+### Cálculo de la función de centro gravitatorio
 
 defus_cGrav <- function(v_angular)
 {
